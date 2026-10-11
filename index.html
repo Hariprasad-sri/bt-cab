@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="theme-color" content="#d97706" />
+  
+  <title>BT CAB — Premium Single & Round Trip Taxi Services</title>
+  <meta name="description" content="Book 24/7 Single Trip One-Way Drop & Round Trip Outstation Cabs. Transparent per km tariffs for Ooty, Isha Yoga Adiyogi, Valparai, Munnar, Bangalore, Chennai. Verified chauffeurs." />
+  
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+  <!-- Modern Typography from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Core Pure CSS -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Core Pure JS -->
+  <script src="./script.js" defer></script>
+</head>
+<body>
+
+  <!-- 1. Top 24/7 Support Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span style="display:inline-flex; align-items:center; gap:6px; color:#ffffff; font-weight:700;">
+          <span class="live-pulse-dot"></span>
+          24/7 Central Dispatch Live
+        </span>
+        <span style="color:#475569;">|</span>
+        <span>Airport Transfers & Outstation Hubs</span>
+      </div>
+
+      <div class="top-bar-right">
+        <button id="audioToggleBtn" onclick="toggleAudio()" style="color:#f59e0b; font-size:0.78rem; font-weight:700;">
+          🔊 Audio On
+        </button>
+        <span style="color:#475569;">|</span>
+        <a href="tel:04224333333" style="color:#ffffff; font-weight:700; display:inline-flex; align-items:center; gap:4px;">
+          📞 0422 433 3333
+        </a>
+        <a href="https://wa.me/919842266088" target="_blank" style="color:#22c55e; font-weight:700; display:inline-flex; align-items:center; gap:4px;">
+          💬 +91 98422 66088
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Sticky Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" onclick="sound.playChime(540, 0.08)">
+        <div class="brand-icon">BT</div>
+        <div class="brand-title">
+          <span class="brand-name">BT <span>CAB</span></span>
+          <span class="brand-sub">Premium Luxury & Outstation</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#booking" class="nav-link">Book Cab</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#routes" class="nav-link">Popular Routes</a>
+        <a href="#fleet" class="nav-link">Fleet & Specs</a>
+        <a href="#tariffs" class="nav-link">Tariffs</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#faqs" class="nav-link">FAQs</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="tel:04224333333" class="btn-secondary btn-sm" style="display:none; @media(min-width:640px){display:inline-flex;}">
+          📞 0422 433 3333
+        </a>
+        <a href="#booking" class="btn-primary btn-sm">
+          🚕 Book Online
+        </a>
+        <button class="menu-toggle-btn" onclick="toggleMobileNav()" aria-label="Open Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer" onclick="if(event.target===this) toggleMobileNav()">
+    <div class="mobile-drawer-content">
+      <button class="drawer-close" onclick="toggleMobileNav()">✕</button>
+      <div style="font-size:1.3rem; font-weight:900; margin-bottom:12px; color:#090d16;">
+        BT <span style="color:#d97706;">CAB</span>
+      </div>
+      <a href="#home" class="nav-link" onclick="toggleMobileNav()">Home</a>
+      <a href="#booking" class="nav-link" onclick="toggleMobileNav()">Book Cab</a>
+      <a href="#services" class="nav-link" onclick="toggleMobileNav()">Services</a>
+      <a href="#routes" class="nav-link" onclick="toggleMobileNav()">Popular Routes</a>
+      <a href="#fleet" class="nav-link" onclick="toggleMobileNav()">Fleet & Specs</a>
+      <a href="#tariffs" class="nav-link" onclick="toggleMobileNav()">Tariffs</a>
+      <a href="#reviews" class="nav-link" onclick="toggleMobileNav()">Reviews</a>
+      <a href="#faqs" class="nav-link" onclick="toggleMobileNav()">FAQs</a>
+      <hr style="border:none; border-top:1px solid #e2e8f0; margin:10px 0;" />
+      <a href="tel:04224333333" class="btn-secondary">📞 Call 0422 433 3333</a>
+      <a href="https://wa.me/919842266088" target="_blank" class="btn-whatsapp">💬 WhatsApp Dispatch</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- 3. Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-glow"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span style="width:8px; height:8px; border-radius:50%; background-color:#22c55e;"></span>
+          INDIA'S #1 RATED CAB SERVICE • 24/7 ACTIVE DISPATCH
+        </div>
+
+        <h1 class="hero-title">
+          The Sovereign Standard of <br />
+          <span class="gradient-text">Premium Cab Travel</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Specializing in <strong>Single Trip One-Way Drops</strong> & <strong>Round Trip Outstation Holidays</strong>. 
+          Enjoy transparent per-km billing, zero return journey charges, and certified hill-route chauffeurs.
+        </p>
+
+        <div class="hero-trust-bar">
+          <span class="hero-trust-item">✓ 50,000+ Completed Trips</span>
+          <span class="hero-trust-item">✓ 15-Min Rapid Airport Dispatch</span>
+          <span class="hero-trust-item">✓ 4.9★ Google Verified Rating</span>
+          <span class="hero-trust-item">✓ 100% Chilled AC Cabs</span>
+        </div>
+      </div>
+
+      <!-- 4. Interactive Live Booking Engine Section -->
+      <div class="container" style="position:relative; z-index:20;">
+        <div id="booking" class="booking-container">
+          <!-- Trip Type Switcher -->
+          <div class="trip-switch-wrapper">
+            <div class="trip-switch-pill">
+              <button class="trip-switch-btn active" data-type="single" onclick="setTripType('single')">
+                ⚡ Single Trip (One-Way Drop)
+              </button>
+              <button class="trip-switch-btn" data-type="round" onclick="setTripType('round')">
+                🔄 Round Trip Outstation
+              </button>
+              <button class="trip-switch-btn" data-type="airport" onclick="setTripType('airport')">
+                ✈️ Airport Express Transfer
+              </button>
+              <button class="trip-switch-btn" data-type="hourly" onclick="setTripType('hourly')">
+                ⏱️ Hourly City Rental
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Destination Preset Chips -->
+          <div class="preset-chips-wrapper">
+            <span class="preset-chip-title">Popular Destinations:</span>
+            <button class="preset-chip active" onclick="selectPresetChip('Ooty / Coonoor')">Ooty / Coonoor</button>
+            <button class="preset-chip" onclick="selectPresetChip('Isha Yoga Adiyogi')">Isha Yoga Adiyogi</button>
+            <button class="preset-chip" onclick="selectPresetChip('Valparai & Sholayar')">Valparai</button>
+            <button class="preset-chip" onclick="selectPresetChip('Munnar (Kerala Hills)')">Munnar</button>
+            <button class="preset-chip" onclick="selectPresetChip('Bengaluru / Electronic City')">Bengaluru</button>
+            <button class="preset-chip" onclick="selectPresetChip('Chennai')">Chennai</button>
+            <button class="preset-chip" onclick="selectPresetChip('Airport Express Transfer')">Airport Transfer</button>
+          </div>
+
+          <form onsubmit="return handleBookingSubmit(event)">
+            <!-- Booking Route & Timing Fields -->
+            <div class="booking-form-grid">
+              <!-- Pickup City -->
+              <div class="input-field-group">
+                <label class="input-label" for="pickupCity">📍 Pickup Location</label>
+                <input type="text" id="pickupCity" value="City Center" required placeholder="Enter pickup city / address" />
+              </div>
+
+              <!-- Drop City -->
+              <div class="input-field-group" id="dropCityGroup">
+                <label class="input-label" for="dropCity">🎯 Destination (Drop)</label>
+                <input type="text" id="dropCity" value="Ooty / Coonoor" required placeholder="Drop city or tourist place" />
+              </div>
+
+              <!-- Pickup Date & Time -->
+              <div class="input-field-group">
+                <label class="input-label" for="pickupDate">🗓️ Pickup Date</label>
+                <input type="date" id="pickupDate" required />
+              </div>
+
+              <div class="input-field-group">
+                <label class="input-label" for="pickupTime">⏰ Pickup Time</label>
+                <input type="time" id="pickupTime" value="09:00" required />
+              </div>
+
+              <!-- Return Date (only visible on Round Trip) -->
+              <div class="input-field-group" id="returnDateGroup" style="display:none;">
+                <label class="input-label" for="returnDate">🔄 Return Date</label>
+                <input type="date" id="returnDate" />
+              </div>
+
+              <!-- Hourly Package (only visible on Hourly) -->
+              <div class="input-field-group" id="hourlyGroup" style="display:none;">
+                <label class="input-label" for="hourlyPackage">⏱️ Package Duration</label>
+                <select id="hourlyPackage" onchange="calculateFare()">
+                  <option value="4hr-40km">4 Hours / 40 KM (Short City)</option>
+                  <option value="8hr-80km" selected>8 Hours / 80 KM (Full Day City)</option>
+                  <option value="12hr-120km">12 Hours / 120 KM (Extended Day)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Vehicle Selection Header -->
+            <div style="margin-bottom:12px; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.95rem; font-weight:800; color:#090d16;">
+                🚗 Choose Your Vehicle Category:
+              </span>
+              <span style="font-size:0.8rem; color:#64748b;">All cabs 100% AC & Sanitized</span>
+            </div>
+
+            <!-- Vehicle Selection Cards Grid -->
+            <div id="vehicleCardsContainer" class="vehicle-cards-grid">
+              <!-- Dynamically rendered by script.js -->
+            </div>
+
+            <!-- Passenger Details -->
+            <div style="margin-bottom:12px; font-size:0.95rem; font-weight:800; color:#090d16;">
+              👤 Passenger Information:
+            </div>
+            <div class="booking-form-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom:24px;">
+              <div class="input-field-group">
+                <label class="input-label" for="customerName">Full Name *</label>
+                <input type="text" id="customerName" placeholder="e.g. Anand Kumar" required />
+              </div>
+              <div class="input-field-group">
+                <label class="input-label" for="customerPhone">Mobile Number *</label>
+                <input type="tel" id="customerPhone" placeholder="10-digit mobile number" required />
+              </div>
+              <div class="input-field-group">
+                <label class="input-label" for="passengerCount">Passengers</label>
+                <select id="passengerCount">
+                  <option value="1">1 Passenger</option>
+                  <option value="2" selected>2 Passengers</option>
+                  <option value="3">3 Passengers</option>
+                  <option value="4">4 Passengers</option>
+                  <option value="6">6 Passengers</option>
+                  <option value="7">7 Passengers</option>
+                  <option value="12">10+ Group</option>
+                </select>
+              </div>
+              <div class="input-field-group">
+                <label class="input-label" for="bookingNotes">Special Instructions (Optional)</label>
+                <input type="text" id="bookingNotes" placeholder="e.g. Child seat, flight number" />
+              </div>
+            </div>
+
+            <!-- Live Fare Breakdown & Confirm Button -->
+            <div class="fare-breakdown-card">
+              <div class="fare-details-grid">
+                <div class="fare-item">
+                  <span class="fare-item-label">Trip Distance</span>
+                  <span class="fare-item-val" id="summaryDistance">86 km (One-Way)</span>
+                </div>
+                <div class="fare-item">
+                  <span class="fare-item-label">Selected Vehicle</span>
+                  <span class="fare-item-val" id="summaryVehicle">Prime Sedan (Swift Dzire)</span>
+                </div>
+                <div class="fare-item">
+                  <span class="fare-item-label">Fare Formula</span>
+                  <span class="fare-item-val" id="summaryBreakdown" style="font-size:0.88rem; color:#cbd5e1;">
+                    86 km × ₹14 + ₹400 Bata
+                  </span>
+                </div>
+              </div>
+
+              <div class="fare-total-box">
+                <span class="fare-item-label" style="color:#fcd34d;">Estimated Total Fare</span>
+                <span class="fare-total-num" id="summaryTotal">₹1,604</span>
+                <span style="font-size:0.75rem; color:#94a3b8; margin-bottom:8px;">Includes Fuel & Driver Allowance</span>
+                <button type="submit" class="btn-primary" style="width:100%; font-size:1.05rem;">
+                  🎟️ Confirm & Generate Booking Pass
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Core Services Section -->
+    <section id="services" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Core Offerings</span>
+          <h2 class="section-title">Most Trusted Outstation & City Cab Solutions</h2>
+          <p class="section-desc">
+            Whether you need a quick airport drop or a multi-day tour across scenic hill roads, BT CAB guarantees clean vehicles and verified chauffeurs.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- 1. One-Way Drop -->
+          <div class="service-card">
+            <div class="service-icon-box">⚡</div>
+            <h3 class="service-title">Single Trip Drop Taxi</h3>
+            <p class="service-text">
+              Why pay two-way charges when you only travel one way? Pay strictly for the distance to your destination. Save up to 40%!
+            </p>
+            <button class="btn-secondary btn-sm" onclick="setTripType('single'); document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+              Book Single Drop →
+            </button>
+          </div>
+
+          <!-- 2. Round Trip Outstation -->
+          <div class="service-card">
+            <div class="service-icon-box">🔄</div>
+            <h3 class="service-title">Round Trip Holiday Tours</h3>
+            <p class="service-text">
+              The cab stays with you throughout your family trip for sightseeing, photography stops, and flexible schedules with zero rush.
+            </p>
+            <button class="btn-secondary btn-sm" onclick="setTripType('round'); document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+              Plan Round Trip →
+            </button>
+          </div>
+
+          <!-- 3. Airport Transfer -->
+          <div class="service-card">
+            <div class="service-icon-box">✈️</div>
+            <h3 class="service-title">Express Airport Transfer Cabs</h3>
+            <p class="service-text">
+              Guaranteed 15-minute advance arrival before your scheduled flight. 24x7 monitoring for flight delays with door-to-terminal baggage help.
+            </p>
+            <button class="btn-secondary btn-sm" onclick="setTripType('airport'); document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+              Book Airport Cab →
+            </button>
+          </div>
+
+          <!-- 4. Hourly City Rental -->
+          <div class="service-card">
+            <div class="service-icon-box">⏱️</div>
+            <h3 class="service-title">Hourly City Rental</h3>
+            <p class="service-text">
+              Affordable 4hr/40km and 8hr/80km packages for local shopping, sightseeing, temple visits, or business executive meetings.
+            </p>
+            <button class="btn-secondary btn-sm" onclick="setTripType('hourly'); document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+              Rent Hourly Cab →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Popular Outstation Routes Catalog -->
+    <section id="routes" class="section-padding" style="background-color:#f1f5f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Popular Outstation Routes</span>
+          <h2 class="section-title">Favorite Holiday & Outstation Getaways</h2>
+          <p class="section-desc">
+            Direct transparent fares for hill stations, spiritual ashrams, and southern metropolitan hubs.
+          </p>
+        </div>
+
+        <div class="routes-grid">
+          <!-- Route 1: Ooty -->
+          <div class="route-card">
+            <div class="route-img-wrapper">
+              <img src="images/innova-hill-cab.jpg" alt="Outstation Cab to Ooty" class="route-img" loading="lazy" />
+              <span class="route-badge">🏔️ Top Hill Route</span>
+              <span class="route-distance-tag">86 KM • 2.5 Hrs</span>
+            </div>
+            <div class="route-body">
+              <h3 class="route-title">City to Ooty & Coonoor</h3>
+              <p class="route-desc">
+                Ascend through Nilgiris tea estates and 36 hairpin bends. Experienced ghat drivers ensuring safety and smooth comfort.
+              </p>
+              <div class="route-fare-row">
+                <div>
+                  <div class="route-fare-label">Single Drop (Sedan)</div>
+                  <div class="route-fare-val">₹2,650</div>
+                </div>
+                <div>
+                  <div class="route-fare-label">Innova Round Trip</div>
+                  <div class="route-fare-val">₹6,800</div>
+                </div>
+              </div>
+              <button class="btn-primary btn-sm" onclick="bookRoute('Ooty / Coonoor', 'innova-crysta')">
+                Book This Route
+              </button>
+            </div>
+          </div>
+
+          <!-- Route 2: Isha Yoga Adiyogi -->
+          <div class="route-card">
+            <div class="route-img-wrapper">
+              <img src="images/isha-adiyogi.jpg" alt="Outstation Cab to Isha Yoga" class="route-img" loading="lazy" />
+              <span class="route-badge">🕉️ Spiritual Package</span>
+              <span class="route-distance-tag">32 KM • 50 Mins</span>
+            </div>
+            <div class="route-body">
+              <h3 class="route-title">City to Isha Yoga Adiyogi</h3>
+              <p class="route-desc">
+                Direct gate drop and pickup for the 112-ft Adiyogi & Dhyanalinga. Includes optional return waiting for the Divya Darshanam light show.
+              </p>
+              <div class="route-fare-row">
+                <div>
+                  <div class="route-fare-label">Single Drop (Sedan)</div>
+                  <div class="route-fare-val">₹950</div>
+                </div>
+                <div>
+                  <div class="route-fare-label">Round Trip with Wait</div>
+                  <div class="route-fare-val">₹1,499</div>
+                </div>
+              </div>
+              <button class="btn-primary btn-sm" onclick="bookRoute('Isha Yoga Adiyogi', 'sedan-prime')">
+                Book This Route
+              </button>
+            </div>
+          </div>
+
+          <!-- Route 3: Valparai -->
+          <div class="route-card">
+            <div class="route-img-wrapper">
+              <img src="images/innova-hill-cab.jpg" alt="Outstation Cab to Valparai" class="route-img" loading="lazy" />
+              <span class="route-badge">🌿 Western Ghats</span>
+              <span class="route-distance-tag">104 KM • 3.5 Hrs</span>
+            </div>
+            <div class="route-body">
+              <h3 class="route-title">City to Valparai Tea Valleys</h3>
+              <p class="route-desc">
+                40 hairpin bends through pristine tea valleys and misty waterfalls. Expert mountain chauffeurs with clean high-torque cabs.
+              </p>
+              <div class="route-fare-row">
+                <div>
+                  <div class="route-fare-label">Single Drop (Sedan)</div>
+                  <div class="route-fare-val">₹2,950</div>
+                </div>
+                <div>
+                  <div class="route-fare-label">Innova Round Trip</div>
+                  <div class="route-fare-val">₹7,200</div>
+                </div>
+              </div>
+              <button class="btn-primary btn-sm" onclick="bookRoute('Valparai & Sholayar', 'innova-crysta')">
+                Book This Route
+              </button>
+            </div>
+          </div>
+
+          <!-- Route 4: Bengaluru -->
+          <div class="route-card">
+            <div class="route-img-wrapper">
+              <img src="images/prime-sedan.jpg" alt="Bangalore Drop Taxi" class="route-img" loading="lazy" />
+              <span class="route-badge">⚡ Highway Express</span>
+              <span class="route-distance-tag">365 KM • 6.5 Hrs</span>
+            </div>
+            <div class="route-body">
+              <h3 class="route-title">Express Highway to Bengaluru (Drop)</h3>
+              <p class="route-desc">
+                6-lane express highway drop taxi with fast-tag toll coverage. Save up to 40% compared to two-way billing on single trip!
+              </p>
+              <div class="route-fare-row">
+                <div>
+                  <div class="route-fare-label">One-Way Drop (Sedan)</div>
+                  <div class="route-fare-val">₹5,490</div>
+                </div>
+                <div>
+                  <div class="route-fare-label">Innova Drop</div>
+                  <div class="route-fare-val">₹8,200</div>
+                </div>
+              </div>
+              <button class="btn-primary btn-sm" onclick="bookRoute('Bengaluru / Electronic City', 'sedan-prime')">
+                Book This Route
+              </button>
+            </div>
+          </div>
+
+          <!-- Route 5: Munnar -->
+          <div class="route-card">
+            <div class="route-img-wrapper">
+              <img src="images/innova-hill-cab.jpg" alt="Outstation Cab to Munnar" class="route-img" loading="lazy" />
+              <span class="route-badge">🍃 Kerala Hills</span>
+              <span class="route-distance-tag">158 KM • 4.5 Hrs</span>
+            </div>
+            <div class="route-body">
+              <h3 class="route-title">Scenic Hills to Munnar</h3>
+              <p class="route-desc">
+                Chinnar Wildlife Sanctuary route with mist, spice plantations, and Cheeyappara waterfalls. Interstate permit assistance included.
+              </p>
+              <div class="route-fare-row">
+                <div>
+                  <div class="route-fare-label">Single Drop (Sedan)</div>
+                  <div class="route-fare-val">₹4,200</div>
+                </div>
+                <div>
+                  <div class="route-fare-label">Innova Round Tour</div>
+                  <div class="route-fare-val">₹9,900</div>
+                </div>
+              </div>
+              <button class="btn-primary btn-sm" onclick="bookRoute('Munnar (Kerala Hills)', 'innova-crysta')">
+                Book This Route
+              </button>
+            </div>
+          </div>
+
+          <!-- Route 6: Airport Transfer -->
+          <div class="route-card">
+            <div class="route-img-wrapper">
+              <img src="images/hero-airport-cab.jpg" alt="Airport Express Cab" class="route-img" loading="lazy" />
+              <span class="route-badge">✈️ On-Time Guarantee</span>
+              <span class="route-distance-tag">25 KM • 35 Mins</span>
+            </div>
+            <div class="route-body">
+              <h3 class="route-title">City to Airport Express Transfer</h3>
+              <p class="route-desc">
+                Guaranteed advance chauffeur arrival at your doorstep. Flight tracking and luggage assistance included with zero surge pricing.
+              </p>
+              <div class="route-fare-row">
+                <div>
+                  <div class="route-fare-label">Sedan Airport Drop</div>
+                  <div class="route-fare-val">₹650</div>
+                </div>
+                <div>
+                  <div class="route-fare-label">Innova Airport Drop</div>
+                  <div class="route-fare-val">₹1,100</div>
+                </div>
+              </div>
+              <button class="btn-primary btn-sm" onclick="bookRoute('Airport Express Transfer', 'sedan-prime')">
+                Book This Route
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Fleet Specifications Section -->
+    <section id="fleet" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Modern Fleet Catalog</span>
+          <h2 class="section-title">Our Premium Fleet & Specifications</h2>
+          <p class="section-desc">
+            Every vehicle in our fleet is clean, thoroughly sanitized, GPS-monitored 24/7, and driven by background-verified chauffeurs.
+          </p>
+        </div>
+
+        <div class="fleet-grid">
+          <!-- Sedan -->
+          <div class="fleet-card">
+            <img src="images/prime-sedan.jpg" alt="Prime Sedan Taxi" class="fleet-img" loading="lazy" />
+            <div class="fleet-card-body">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="font-size:1.3rem; font-weight:800; color:#090d16;">Prime Sedan</h3>
+                <span class="badge-gold">₹14/km One-Way</span>
+              </div>
+              <p style="color:#64748b; font-size:0.85rem; margin-top:4px;">Maruti Swift Dzire / Toyota Etios</p>
+              
+              <ul class="fleet-features-list">
+                <li class="fleet-feature-item"><span class="check">✓</span> 4 Passenger Seats + 2 Large Luggage Bags</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> Chilled Climate Control Air Conditioning</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> ₹12/km Round Trip • Driver Bata ₹400/day</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> Ideal for couples & airport solo travelers</li>
+              </ul>
+
+              <button class="btn-primary" onclick="bookVehicleModel('sedan-prime')" style="margin-top:auto;">
+                Book Prime Sedan
+              </button>
+            </div>
+          </div>
+
+          <!-- SUV Ertiga -->
+          <div class="fleet-card">
+            <img src="images/hero-airport-cab.jpg" alt="Prime SUV Ertiga" class="fleet-img" loading="lazy" />
+            <div class="fleet-card-body">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="font-size:1.3rem; font-weight:800; color:#090d16;">Prime SUV</h3>
+                <span class="badge-gold">₹18/km One-Way</span>
+              </div>
+              <p style="color:#64748b; font-size:0.85rem; margin-top:4px;">Maruti Ertiga / XL6 (6-Seater)</p>
+              
+              <ul class="fleet-features-list">
+                <li class="fleet-feature-item"><span class="check">✓</span> 6 Passenger Seats + 3 Luggage Bags</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> Dual AC vents across all seating rows</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> ₹15/km Round Trip • Driver Bata ₹500/day</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> Smooth suspension & USB charging ports</li>
+              </ul>
+
+              <button class="btn-primary" onclick="bookVehicleModel('suv-ertiga')" style="margin-top:auto;">
+                Book Prime SUV
+              </button>
+            </div>
+          </div>
+
+          <!-- Innova Crysta -->
+          <div class="fleet-card">
+            <img src="images/innova-hill-cab.jpg" alt="Innova Crysta Luxury Taxi" class="fleet-img" loading="lazy" />
+            <div class="fleet-card-body">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="font-size:1.3rem; font-weight:800; color:#090d16;">Innova Crysta</h3>
+                <span class="badge-gold">₹22/km One-Way</span>
+              </div>
+              <p style="color:#64748b; font-size:0.85rem; margin-top:4px;">Toyota Innova Crysta 2.4Z (7-Seater)</p>
+              
+              <ul class="fleet-features-list">
+                <li class="fleet-feature-item"><span class="check">✓</span> 7 Captain Bucket Seats + 4 Luggage Bags</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> King of Hill Roads & Mountain Tours</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> ₹18/km Round Trip • Driver Bata ₹600/day</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> Maximum family comfort on long journeys</li>
+              </ul>
+
+              <button class="btn-primary" onclick="bookVehicleModel('innova-crysta')" style="margin-top:auto;">
+                Book Innova Crysta
+              </button>
+            </div>
+          </div>
+
+          <!-- Tempo Traveller / Urbania -->
+          <div class="fleet-card">
+            <img src="images/tempo-traveller.jpg" alt="Luxury Tempo Urbania" class="fleet-img" loading="lazy" />
+            <div class="fleet-card-body">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="font-size:1.3rem; font-weight:800; color:#090d16;">Luxury Tempo</h3>
+                <span class="badge-gold">₹32/km One-Way</span>
+              </div>
+              <p style="color:#64748b; font-size:0.85rem; margin-top:4px;">Force Urbania / Winger 12-Seater</p>
+              
+              <ul class="fleet-features-list">
+                <li class="fleet-feature-item"><span class="check">✓</span> 12 Pushback Recliner Seats + 8 Large Bags</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> Walk-through High Roof Cabin & LED Screen</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> ₹26/km Round Trip • Driver Bata ₹800/day</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> Perfect for weddings, pilgrimages & corporate tours</li>
+              </ul>
+
+              <button class="btn-primary" onclick="bookVehicleModel('tempo-urbania')" style="margin-top:auto;">
+                Book Luxury Tempo
+              </button>
+            </div>
+          </div>
+
+          <!-- Mercedes VIP -->
+          <div class="fleet-card">
+            <img src="images/luxury-mercedes.jpg" alt="Mercedes Benz VIP Chauffeur" class="fleet-img" loading="lazy" />
+            <div class="fleet-card-body">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="font-size:1.3rem; font-weight:800; color:#090d16;">VIP Chauffeur</h3>
+                <span class="badge-dark">₹65/km One-Way</span>
+              </div>
+              <p style="color:#64748b; font-size:0.85rem; margin-top:4px;">Mercedes-Benz E-Class / BMW 5 Series</p>
+              
+              <ul class="fleet-features-list">
+                <li class="fleet-feature-item"><span class="check">✓</span> 4 Executive Leather Seats + 3 Bags</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> Burmester Acoustic Surround Audio</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> Suited Chauffeur with VIP Airport Meet-and-Greet</li>
+                <li class="fleet-feature-item"><span class="check">✓</span> Presidential executive transportation & wedding luxury</li>
+              </ul>
+
+              <button class="btn-primary" onclick="bookVehicleModel('luxury-mercedes')" style="margin-top:auto;">
+                Book VIP Chauffeur
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Transparent Tariff Rate Matrix Section -->
+    <section id="tariffs" class="section-padding" style="background-color:#f1f5f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tariff Card</span>
+          <h2 class="section-title">100% Transparent Taxi Tariffs & Rates</h2>
+          <p class="section-desc">
+            No surprise surcharges, no hidden night fees before 10 PM. Review our exact rate structure below.
+          </p>
+        </div>
+
+        <div class="tariff-table-wrapper">
+          <table class="tariff-table">
+            <thead>
+              <tr>
+                <th>Vehicle Class</th>
+                <th>Capacity</th>
+                <th>Single Trip (One-Way)</th>
+                <th>Round Trip Rate</th>
+                <th>Driver Bata / Day</th>
+                <th>Min. Outstation KM</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Prime Sedan</strong> (Dzire / Etios)</td>
+                <td>4 + 1 Driver</td>
+                <td><span class="badge-gold">₹14 / km</span></td>
+                <td><span class="badge-slate">₹12 / km</span></td>
+                <td>₹400</td>
+                <td>250 km / day</td>
+              </tr>
+              <tr>
+                <td><strong>Prime SUV</strong> (Ertiga / XL6)</td>
+                <td>6 + 1 Driver</td>
+                <td><span class="badge-gold">₹18 / km</span></td>
+                <td><span class="badge-slate">₹15 / km</span></td>
+                <td>₹500</td>
+                <td>250 km / day</td>
+              </tr>
+              <tr>
+                <td><strong>Innova Crysta 2.4Z</strong></td>
+                <td>7 + 1 Driver</td>
+                <td><span class="badge-gold">₹22 / km</span></td>
+                <td><span class="badge-slate">₹18 / km</span></td>
+                <td>₹600</td>
+                <td>300 km / day</td>
+              </tr>
+              <tr>
+                <td><strong>Luxury Tempo / Urbania</strong></td>
+                <td>12 + 1 Driver</td>
+                <td><span class="badge-gold">₹32 / km</span></td>
+                <td><span class="badge-slate">₹26 / km</span></td>
+                <td>₹800</td>
+                <td>300 km / day</td>
+              </tr>
+              <tr>
+                <td><strong>VIP Chauffeur</strong> (Mercedes/BMW)</td>
+                <td>4 + 1 Driver</td>
+                <td><span class="badge-dark">₹65 / km</span></td>
+                <td><span class="badge-slate">₹55 / km</span></td>
+                <td>₹1,200</td>
+                <td>250 km / day</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:20px; font-size:0.85rem; color:#64748b; line-height:1.6;">
+          * <strong>Billing Transparency Notes:</strong> Single Trip drop taxis include only one-way travel (no return fare). Fast-Tag toll gate charges, state permits, and hill parking fees are actuals paid directly at booths.
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Customer Reviews & Ratings -->
+    <section id="reviews" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Rider Reviews</span>
+          <h2 class="section-title">Loved by Thousands Across the Nation</h2>
+          <p class="section-desc">
+            Read authentic feedback from families, business executives, and tourists who ride with us.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Booked an Innova Crysta for a 3-day family holiday to Ooty. Driver Murugan was exceptionally courteous and an expert on mountain hairpin bends. The cab was spotless and arrived 15 mins early at the airport terminal!"
+            </p>
+            <div class="testimonial-author">
+              <div>
+                <div class="author-name">Karthik Ramanathan</div>
+                <div class="author-route">Airport to Ooty Hills</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "The Single Trip one-way drop taxi saved me almost ₹900 compared to two-way billing. Chauffeur waited patiently for the evening Aarti at Isha Yoga Adiyogi without any unfair extra surge charges. Super reliable!"
+            </p>
+            <div class="testimonial-author">
+              <div>
+                <div class="author-name">Ananya Sridharan</div>
+                <div class="author-route">City Station to Isha Yoga</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">
+              "I frequently travel outstation to Electronic City, Bangalore. BT CAB offers 100% transparent per km billing and no hidden night charges. The online digital booking pass with WhatsApp dispatch was instantaneous."
+            </p>
+            <div class="testimonial-author">
+              <div>
+                <div class="author-name">Dr. Praveen Kumar</div>
+                <div class="author-route">City to Bengaluru Drop</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Frequently Asked Questions Accordion -->
+    <section id="faqs" class="section-padding" style="background-color:#f1f5f9;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">
+            Everything you need to know about our billing, booking confirmations, and driver safety standards.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>What is the difference between Single Trip (One-Way) and Round Trip billing?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              In a Single Trip (One-Way Drop Taxi), you only pay for the distance travelled from your pickup point to your destination. You DO NOT pay for the car’s return journey! In a Round Trip, the cab stays with you throughout your journey for sightseeing and return travel.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Are Toll, Parking and State Permit fees included in the fare?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Our taxi fare covers the vehicle rental, fuel charges, and driver bata. Fast-tag toll charges, hill station parking fees, and interstate permits are actuals paid directly by the passenger at the toll booths.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>How do I know my booking is confirmed?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Once you confirm your booking on this website, you immediately receive a digital boarding pass with a unique Booking ID. We also send an instant WhatsApp confirmation message with chauffeur contact and vehicle number.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Can I book a cab for multi-day tours to Ooty, Munnar or Kodaikanal?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Yes! You can choose Round Trip and select your departure date and return date. Our minimum daily outstation calculation is 250 km/day (300 km for Innova Crysta), and driver night bata is transparently calculated.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Are all BT CAB drivers background-verified and hill-route certified?</span>
+              <span class="faq-chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+              Absolutely. Every chauffeur undergoes police background verification, minimum 5 years commercial driving experience, and specialized training for steep mountain hairpin bends and highway safety driving.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Dispatch & Contact Section -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">24x7 Support</span>
+          <h2 class="section-title">Get in Touch with BT CAB</h2>
+          <p class="section-desc">
+            Our dispatch control room is active 24 hours a day, 7 days a week, 365 days a year.
+          </p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+          <!-- Card 1 -->
+          <div class="service-card text-center" style="align-items:center;">
+            <div class="service-icon-box">📞</div>
+            <h3 class="service-title">Phone Booking</h3>
+            <p class="service-text">Speak directly with our central dispatch controller:</p>
+            <a href="tel:04224333333" class="btn-primary" style="font-size:1.1rem; width:100%;">
+              0422 433 3333
+            </a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card text-center" style="align-items:center;">
+            <div class="service-icon-box" style="background-color:#dcfce7; color:#16a34a;">💬</div>
+            <h3 class="service-title">WhatsApp Dispatch</h3>
+            <p class="service-text">Instant quotes, live location sharing & booking passes:</p>
+            <a href="https://wa.me/919842266088" target="_blank" class="btn-whatsapp" style="font-size:1.1rem; width:100%;">
+              +91 98422 66088
+            </a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card text-center" style="align-items:center;">
+            <div class="service-icon-box">📍</div>
+            <h3 class="service-title">Headquarters</h3>
+            <p class="service-text">
+              Central Operations Center & Dispatch Hub<br />
+              Airport Junction Terminal Office
+            </p>
+            <a href="mailto:dispatch@btcab.in" class="btn-secondary" style="width:100%;">
+              ✉️ dispatch@btcab.in
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12. Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <div class="brand-logo" style="margin-bottom:16px;">
+            <div class="brand-icon">BT</div>
+            <div class="brand-title">
+              <span class="brand-name" style="color:#ffffff;">BT <span style="color:#f59e0b;">CAB</span></span>
+              <span class="brand-sub" style="color:#94a3b8;">The Sovereign Standard of Cab Travel</span>
+            </div>
+          </div>
+          <p style="font-size:0.88rem; line-height:1.6; color:#94a3b8;">
+            Premier taxi and outstation mobility network. Offering 24x7 Single Trip One-Way Drops, Round Trip Outstation Tours, and Express Airport Chauffeurs with guaranteed transparent billing and zero surge pricing.
+          </p>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#booking">Book Online</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#fleet">Fleet & Tariffs</a></li>
+            <li><a href="#reviews">Verified Reviews</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Popular Routes -->
+        <div>
+          <h4 class="footer-col-title">Top Routes</h4>
+          <ul class="footer-links">
+            <li><a href="#booking" onclick="bookRoute('Ooty / Coonoor')">City to Ooty</a></li>
+            <li><a href="#booking" onclick="bookRoute('Isha Yoga Adiyogi')">City to Isha Yoga</a></li>
+            <li><a href="#booking" onclick="bookRoute('Valparai & Sholayar')">City to Valparai</a></li>
+            <li><a href="#booking" onclick="bookRoute('Bengaluru / Electronic City')">City to Bangalore</a></li>
+            <li><a href="#booking" onclick="bookRoute('Munnar (Kerala Hills)')">City to Munnar</a></li>
+            <li><a href="#booking" onclick="bookRoute('Airport Express Transfer')">Airport Transfer</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: 24/7 Dispatch Hub -->
+        <div>
+          <h4 class="footer-col-title">24x7 Control Room</h4>
+          <p style="font-size:0.88rem; line-height:1.6; color:#cbd5e1; margin-bottom:12px;">
+            Central Dispatch Hub & Operations Center<br />
+            📞 Call Center: <strong>0422 433 3333</strong><br />
+            💬 WhatsApp: <strong>+91 98422 66088</strong><br />
+            ✉️ Email: <strong>dispatch@btcab.in</strong>
+          </p>
+          <span class="badge-gold" style="font-size:0.8rem;">● 24/7 Active Cabs & Rapid Dispatch</span>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 BT CAB. All Rights Reserved. Pure HTML, CSS & JavaScript Edition.
+        </div>
+        <div style="display:flex; gap:16px;">
+          <a href="#home" style="color:#94a3b8;">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 13. Mobile Bottom Floating Navigation Bar -->
+  <nav class="mobile-bottom-nav">
+    <a href="#home" class="mobile-nav-item active" onclick="sound.playChime(500, 0.05)">
+      <span style="font-size:1.2rem;">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="#routes" class="mobile-nav-item" onclick="sound.playChime(500, 0.05)">
+      <span style="font-size:1.2rem;">🗺️</span>
+      <span>Routes</span>
+    </a>
+    <a href="#booking" class="mobile-nav-item book-action" onclick="sound.playChime(660, 0.1)">
+      <span style="font-size:1.25rem;">🚕</span>
+      <span style="font-weight:800;">Book Cab</span>
+    </a>
+    <a href="#tariffs" class="mobile-nav-item" onclick="sound.playChime(500, 0.05)">
+      <span style="font-size:1.2rem;">💰</span>
+      <span>Tariffs</span>
+    </a>
+    <a href="tel:04224333333" class="mobile-nav-item" style="color:#090d16;">
+      <span style="font-size:1.2rem;">📞</span>
+      <span>Call</span>
+    </a>
+  </nav>
+
+  <!-- 14. Desktop Floating Action Buttons -->
+  <div class="desktop-floating-actions">
+    <a href="https://wa.me/919842266088" target="_blank" class="floating-btn floating-wa" title="Chat on WhatsApp">
+      💬
+    </a>
+    <a href="tel:04224333333" class="floating-btn floating-call" title="Call Chauffeur Dispatch">
+      📞
+    </a>
+  </div>
+
+  <!-- 15. Booking Confirmation Modal (Digital Boarding Pass) -->
+  <div id="bookingModal" class="modal-overlay">
+    <div class="ticket-pass-card">
+      <!-- Header -->
+      <div class="ticket-header">
+        <button onclick="closeModal()" style="position:absolute; top:18px; right:18px; color:#ffffff; font-size:1.4rem;">✕</button>
+        <div class="ticket-badge-ribbon">
+          <span>✓</span> BOOKING PASS GENERATED
+        </div>
+        <div style="font-size:0.85rem; color:#94a3b8; text-transform:uppercase; letter-spacing:0.04em;">Official Booking ID</div>
+        <div class="ticket-id" id="modalBookingId">BT-CAB-9842</div>
+      </div>
+
+      <!-- Ticket Details -->
+      <div class="ticket-body">
+        <div class="ticket-row">
+          <span class="ticket-label">Passenger</span>
+          <span class="ticket-val" id="modalPassenger">Anand Kumar (+91 98422 66088)</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Route</span>
+          <span class="ticket-val" id="modalRoute" style="color:#d97706;">Pickup ➔ Destination</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Service Type</span>
+          <span class="ticket-val" id="modalTripType">Single Trip (One-Way Drop)</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Pickup Schedule</span>
+          <span class="ticket-val" id="modalSchedule">Today at 09:00 AM</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-label">Assigned Vehicle Class</span>
+          <span class="ticket-val" id="modalVehicle">Prime Sedan (Swift Dzire)</span>
+        </div>
+
+        <div class="ticket-total-box">
+          <div>
+            <span style="font-size:0.75rem; color:#b45309; font-weight:700; text-transform:uppercase;">Estimated Total Fare</span>
+            <div style="font-size:0.8rem; color:#64748b;">Includes Chauffeur Bata & Fuel</div>
+          </div>
+          <div style="font-size:1.8rem; font-weight:900; color:#d97706;" id="modalFare">₹1,604</div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="ticket-actions">
+          <a id="modalWhatsAppBtn" href="#" target="_blank" class="btn-whatsapp" style="width:100%; font-size:1.02rem;">
+            💬 Send to WhatsApp for Driver Dispatch
+          </a>
+          <div style="display:flex; gap:10px;">
+            <button onclick="window.print()" class="btn-secondary" style="flex:1;">
+              🖨️ Print Pass
+            </button>
+            <button onclick="closeModal()" class="btn-dark" style="flex:1;">
+              Done
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
